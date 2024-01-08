@@ -1,10 +1,10 @@
 import sys
-import ridge.ridge_regression_utils as rrutils
-import ridge.dataset_utils as dutils
-import ridge.config_utils as cutils
+import ridgie.ridge_regression_utils as rrutils
+import ridgie.dataset_utils as dutils
+import ridgie.config_utils as cutils
 import matplotlib.pyplot as plt
-from sklean import linear_model
-from sklean.metrics import mean_squared_error
+from sklearn import linear_model
+from sklearn.metrics import mean_squared_error
 
 
 def run():
