@@ -18,7 +18,7 @@ def loss(
         b: float,
         alpha: float) -> float:
     
-    return np.sum(np.square(y - (np.matmul(x, w) + b))) + C * np.linalg.norm(w) ** 2
+    return np.sum(np.square(y - (np.matmul(x, w) + b))) + alpha * np.linalg.norm(w) ** 2
 
 
 def loss_gradient_weights(
@@ -30,7 +30,7 @@ def loss_gradient_weights(
 
     sigma = np.sum((np.matmul(x, w) + b - y).reshape(-1, 1) * x, axis=0).transpose()
 
-    ridge = C * w
+    ridge = alpha * w
 
     return 2 * (sigma + ridge)
 
@@ -63,6 +63,8 @@ def ridge_regression_gd(
     losses.append(loss(x, y, w, b, alpha))
 
     initial_lr = 0.01
+
+    lr = initial_lr
 
     t = 1
 
