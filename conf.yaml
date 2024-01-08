@@ -1,0 +1,14 @@
+n_dataset: 200
+n_dimension: 100
+weight_ones:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+alpha: 1.0
