@@ -3,6 +3,7 @@ import ridgie.ridge_regression_utils as rrutils
 import ridgie.dataset_utils as dutils
 import ridgie.config_utils as cutils
 import matplotlib.pyplot as plt
+import numpy as np
 from sklearn import linear_model
 from sklearn.metrics import mean_squared_error
 
