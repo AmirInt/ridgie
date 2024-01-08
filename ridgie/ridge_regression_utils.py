@@ -1,6 +1,16 @@
 import numpy as np
 
 
+def mse(
+        x: np.ndarray,
+        y: np.ndarray,
+        w: np.ndarray,
+        b: float) -> float:
+
+    residuals = y - (np.dot(x, w) + b)
+    return np.dot(residuals, residuals) / y.shape[0]
+
+
 def loss(
         x: np.ndarray,
         y: np.ndarray,
